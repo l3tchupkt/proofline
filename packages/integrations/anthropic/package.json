@@ -1,0 +1,27 @@
+{
+  "name": "@proofline/integration-anthropic",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "lint": "eslint src"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^1.6.0",
+    "@proofline/authorization": "workspace:*",
+    "@proofline/config": "workspace:*",
+    "@proofline/contracts": "workspace:*",
+    "@proofline/domain": "workspace:*",
+    "@proofline/evidence": "workspace:*",
+    "zod": "^4.6.7"
+  }
+}
+
