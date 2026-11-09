@@ -14,3 +14,4 @@ Verification checklist:
 - Logs redact authorization headers, cookies, tokens, and secrets.
 - CORS, multipart limits, rate limiting, and Zod validation are active on `apps/api`.
 - `.env` files and real credentials are never committed.
+

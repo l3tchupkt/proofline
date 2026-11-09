@@ -12,3 +12,4 @@ description: Security verification checklist covering authentication, workspace 
 4. Confirm `AIActor` is structurally blocked from calling `approveSubmission`, `submitToPayPal`, or mutating external dispute state.
 5. Confirm `approvalDigest` SHA-256 covers response notes, evidence type, tracking/refund metadata, and ordered document SHA-256 hashes; verify any mutation transitions status out of `APPROVED`.
 6. Check logger redaction lists and scan git index for secrets or `.env` files.
+

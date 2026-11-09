@@ -8,6 +8,8 @@ dist/
 out/
 build/
 .turbo/
+*.tsbuildinfo
+next-env.d.ts
 
 # Environment files
 .env
@@ -37,3 +39,4 @@ Thumbs.db
 *.swp
 .idea/
 .vscode/settings.json
+

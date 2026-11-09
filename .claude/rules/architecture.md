@@ -11,3 +11,4 @@ paths:
 3. `apps/web` MUST NOT import `@proofline/database`, `@proofline/integration-paypal`, `@proofline/integration-anthropic`, or execute PayPal/database logic directly.
 4. `@proofline/integration-anthropic` MUST NOT receive or invoke any tool capable of mutating PayPal disputes, approving submissions, or issuing refunds.
 5. Simulated demo records (`DEMO_FIXTURE`) and live sandbox records (`PAYPAL_SANDBOX`) must stay strictly isolated in persistence and queries.
+

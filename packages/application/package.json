@@ -1,0 +1,30 @@
+{
+  "name": "@proofline/application",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "lint": "eslint src"
+  },
+  "dependencies": {
+    "@proofline/authorization": "workspace:*",
+    "@proofline/config": "workspace:*",
+    "@proofline/contracts": "workspace:*",
+    "@proofline/database": "workspace:*",
+    "@proofline/domain": "workspace:*",
+    "@proofline/evidence": "workspace:*",
+    "@proofline/integration-anthropic": "workspace:*",
+    "@proofline/integration-paypal": "workspace:*",
+    "argon2": "^0.45.2",
+    "pdf-lib": "^1.17.1"
+  }
+}
+

@@ -20,3 +20,4 @@
 - [ ] No AI tool grants direct financial/submission execution
 - [ ] Every generated factual claim maintains verifiable source provenance
 - [ ] No secrets or `.env` files committed
+

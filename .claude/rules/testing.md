@@ -11,3 +11,4 @@ paths:
 2. Use realistic synthetic fixtures and mock/local HTTP transport adapters or in-process PostgreSQL (`@electric-sql/pglite`) for deterministic integration tests.
 3. Every security invariant (cross-workspace denial, AI tool authorization denial, invalid webhook rejection, approval invalidation on edit, magic-byte spoofing rejection) must have dedicated automated assertions.
 4. Keep unit tests fast and isolated; verify real SQL migrations, foreign keys, and transaction rollback in integration tests.
+

@@ -14,3 +14,4 @@ Verification checklist:
 - OCR/vision facts are tagged `REQUIRES_REVIEW`.
 - Untrusted evidence text is isolated in `<untrusted_evidence>` XML wrappers with prompt-injection defenses.
 - Every AI-generated claim maps to an existing `sourceAssetId` and locator.
+

@@ -12,3 +12,4 @@ Focus areas:
 - Verify transactional consistency for submission approval/submission state transitions and append-only audit logs.
 - Enforce strict database isolation between `PAYPAL_SANDBOX` disputes and `DEMO_FIXTURE` scenarios.
 - Review any proposed abstraction to prevent unnecessary boilerplate or over-engineering.
+

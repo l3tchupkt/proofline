@@ -24,3 +24,4 @@ This repository uses specialized engineering roles defined in `.claude/agents/`,
 2. `pnpm lint` passes with zero errors.
 3. `pnpm test` passes with zero skipped critical security/provenance tests.
 4. No real secrets, tokens, or `.env` files are staged (`git status` verified).
+

@@ -13,3 +13,4 @@ paths:
 4. Never log `PAYPAL_CLIENT_SECRET`, `ANTHROPIC_API_KEY`, OAuth bearer tokens, session tokens, or cookie headers.
 5. Rate-limit login, evidence uploads, AI investigation runs, and external submission endpoints.
 6. Evidence downloads must stream from private storage after server-side workspace ownership verification; never expose public bucket or static upload URLs.
+

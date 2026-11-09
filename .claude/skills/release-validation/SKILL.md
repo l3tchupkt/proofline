@@ -14,3 +14,4 @@ description: Pre-release validation procedure verifying build, tests, docs, Rend
 6. `pnpm test:e2e` passes Playwright checks against the running application.
 7. Verify `README.md`, `SECURITY.md`, `CONTRIBUTING.md`, `render.yaml`, and `.env.example` contain zero fabricated credentials, fake metrics, or non-existent features.
 8. Verify `git status` shows no `.env` files or unignored build/storage artifacts.
+

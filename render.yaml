@@ -1,0 +1,66 @@
+databases:
+  - name: proofline-postgres
+    plan: free
+    databaseName: proofline
+    user: proofline_app
+
+services:
+  - type: web
+    name: proofline-api
+    runtime: node
+    # Persistent disk requires Starter+ on Render; switch to STORAGE_DRIVER=s3 and remove disk for Free tier.
+    plan: starter
+    buildCommand: pnpm install --frozen-lockfile && pnpm --filter @proofline/api... build
+    startCommand: pnpm --filter @proofline/database migrate && pnpm --filter @proofline/api start
+    healthCheckPath: /api/health
+    disk:
+      name: proofline-evidence-disk
+      mountPath: /var/data/proofline/evidence
+      sizeGB: 5
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: API_PORT
+        value: "4000"
+      - key: PAYPAL_ENVIRONMENT
+        value: sandbox
+      - key: STORAGE_DRIVER
+        value: local
+      - key: STORAGE_PATH
+        value: /var/data/proofline/evidence
+      - key: SESSION_COOKIE_SECURE
+        value: "true"
+      - key: DEMO_MODE
+        value: "false"
+      - key: DATABASE_URL
+        fromDatabase:
+          name: proofline-postgres
+          property: connectionString
+      - key: SESSION_SECRET
+        generateValue: true
+      - key: CORS_ORIGIN
+        sync: false
+      - key: PAYPAL_CLIENT_ID
+        sync: false
+      - key: PAYPAL_CLIENT_SECRET
+        sync: false
+      - key: PAYPAL_WEBHOOK_ID
+        sync: false
+      - key: ANTHROPIC_API_KEY
+        sync: false
+      - key: ANTHROPIC_MODEL
+        sync: false
+
+  - type: web
+    name: proofline-web
+    runtime: node
+    plan: free
+    buildCommand: pnpm install --frozen-lockfile && pnpm --filter @proofline/web... build
+    startCommand: pnpm --filter @proofline/web start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: API_INTERNAL_URL
+        sync: false
+      - key: NEXT_PUBLIC_API_URL
+        value: ""

@@ -11,3 +11,4 @@ paths:
 3. Use `NodeNext` explicit `.js` relative import specifiers inside backend and workspace packages (`packages/*`, `apps/api`).
 4. Represent money using integer minor units (`amountMinor: number` + `currencyCode: string`) or validated decimal strings from PayPal, never IEEE-754 floating-point arithmetic.
 5. External PayPal identifiers (`dispute_id`, `transaction_id`, `webhook_event_id`) must remain distinct typed fields from internal UUID primary keys.
+

@@ -1,0 +1,28 @@
+{
+  "name": "@proofline/evidence",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "lint": "eslint src"
+  },
+  "dependencies": {
+    "@proofline/domain": "workspace:*",
+    "csv-parse": "^7.0.3",
+    "mailparser": "^3.14.2",
+    "pdf-lib": "^1.17.1",
+    "pdfjs-dist": "^6.5.438"
+  },
+  "devDependencies": {
+    "@types/mailparser": "^3.9.0"
+  }
+}
+

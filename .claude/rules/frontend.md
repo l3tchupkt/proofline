@@ -11,3 +11,4 @@ paths:
 3. Never call PayPal APIs or database drivers from React components or Next.js route handlers; communicate exclusively through `apps/api`.
 4. Always surface explicit error states, loading skeletons, and empty states—never render fake success confirmations.
 5. Ensure full keyboard navigation, semantic landmarks, accessible labels, and WCAG AA contrast.
+

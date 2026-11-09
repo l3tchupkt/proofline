@@ -14,3 +14,4 @@ Verification checklist:
 - Webhook verification posts exact headers and event body to `/v1/notifications/verify-webhook-signature` and rejects anything other than `verification_status === 'SUCCESS'`.
 - Post-submission always re-fetches dispute details and distinguishes API acceptance from case resolution.
 - Sandbox buyer dispute creation (`PayPal-Auth-Assertion` JWT) stays isolated to developer CLI scripts, never merchant production endpoints.
+

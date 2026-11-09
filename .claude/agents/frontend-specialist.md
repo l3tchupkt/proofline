@@ -13,3 +13,4 @@ Verification checklist:
 - AG Grid Community is configured cleanly with typed columns, sorting, filtering, search, pagination, and keyboard navigation.
 - Every view renders explicit loading skeletons, empty states, and honest error banners—never fake success banners.
 - Verify accessibility compliance via `.claude/skills/web-design-guidelines`.
+
