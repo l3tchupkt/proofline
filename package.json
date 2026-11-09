@@ -2,6 +2,7 @@
   "name": "proofline",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "description": "Evidence you can trace. Disputes you can defend.",
   "license": "Apache-2.0",
   "author": "Lakshmikanthan K (https://github.com/l3tchupkt)",
@@ -33,11 +34,33 @@
     "sandbox:create-dispute": "tsx scripts/create-sandbox-dispute.ts",
     "demo:seed": "tsx scripts/seed-demo.ts"
   },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "argon2",
+      "esbuild",
+      "sharp"
+    ]
+  },
   "devDependencies": {
+    "@electric-sql/pglite": "^0.5.15",
+    "@eslint/js": "^9.39.5",
     "@playwright/test": "^1.65.0",
+    "@proofline/api": "workspace:*",
+    "@proofline/application": "workspace:*",
+    "@proofline/authorization": "workspace:*",
+    "@proofline/config": "workspace:*",
+    "@proofline/contracts": "workspace:*",
+    "@proofline/database": "workspace:*",
+    "@proofline/domain": "workspace:*",
+    "@proofline/evidence": "workspace:*",
+    "@proofline/integration-anthropic": "workspace:*",
+    "@proofline/integration-paypal": "workspace:*",
+    "@proofline/ui": "workspace:*",
     "@types/node": "^22.20.5",
-    "eslint": "^9.39.2",
+    "drizzle-orm": "^0.45.4",
+    "eslint": "^10.14.0",
     "globals": "^16.4.0",
+    "pdf-lib": "^1.17.1",
     "tsx": "^4.23.15",
     "turbo": "^2.11.10",
     "typescript": "5.9.3",

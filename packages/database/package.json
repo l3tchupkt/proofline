@@ -1,0 +1,31 @@
+{
+  "name": "@proofline/database",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json && node -e \"import('node:fs').then(fs => fs.cpSync('src/migrations', 'dist/migrations', { recursive: true }))\"",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "lint": "eslint src",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "tsx src/migrate.ts",
+    "migrate": "node dist/migrate.js"
+  },
+  "dependencies": {
+    "@proofline/domain": "workspace:*",
+    "drizzle-orm": "^0.45.4",
+    "pg": "^8.23.1"
+  },
+  "devDependencies": {
+    "@electric-sql/pglite": "^0.5.15",
+    "@types/pg": "^8.23.1",
+    "drizzle-kit": "^0.31.11",
+    "tsx": "^4.23.15"
+  }
+}
