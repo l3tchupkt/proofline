@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+:root {
+  --bg-canvas: #F7F6F2;
+  --bg-surface: #FFFFFF;
+  --bg-recessed: #F0EEE8;
+  --ink-primary: #14181F;
+  --ink-secondary: #4A5568;
+  --ink-muted: #6B7280;
+  --border-hairline: #DFDCD4;
+  --border-strong: #C5C0B4;
+  --accent-navy: #1B3B6F;
+  --accent-navy-hover: #142C54;
+}
+
+html,
+body {
+  background-color: var(--bg-canvas);
+  color: var(--ink-primary);
+  font-family: var(--font-plex-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+code,
+pre,
+.font-mono {
+  font-family: var(--font-plex-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+/* Editorial AG Grid Community Theme Tuning */
+.ag-theme-proofline {
+  --ag-background-color: #FFFFFF;
+  --ag-foreground-color: #14181F;
+  --ag-header-background-color: #F0EEE8;
+  --ag-header-foreground-color: #14181F;
+  --ag-odd-row-background-color: #FDFCFA;
+  --ag-row-hover-color: #F4F7FB;
+  --ag-selected-row-background-color: #EEF3FA;
+  --ag-border-color: #DFDCD4;
+  --ag-font-family: var(--font-plex-sans), sans-serif;
+  --ag-font-size: 13px;
+  --ag-grid-size: 6px;
+  --ag-border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
