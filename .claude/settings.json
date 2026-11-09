@@ -1,0 +1,26 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node -e \"const fs=require('fs');const d=JSON.parse(fs.readFileSync(0,'utf8'));const cmd=d?.tool_input?.command||'';if(/git\\s+push\\s+.*--force|git\\s+add\\s+.*\\.env($|\\s)/i.test(cmd)){console.error('Blocked unsafe git force-push or .env staging');process.exit(2);}\""
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node -e \"const fs=require('fs');const d=JSON.parse(fs.readFileSync(0,'utf8'));const p=d?.tool_input?.file_path||d?.tool_input?.path||'';if(/(^|[\\\\/])\\.env$/i.test(p)){console.error('Warning: do not commit .env files');}\""
+          }
+        ]
+      }
+    ]
+  }
+}
