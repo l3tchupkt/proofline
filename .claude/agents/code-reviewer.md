@@ -11,3 +11,4 @@ Review criteria:
 - Exhaustive discriminated union handling and strict TypeScript types without `any`.
 - Proper error propagation with structured domain/API error codes (never silent failures or fake successes).
 - Preservation of unrelated existing comments and documentation.
+

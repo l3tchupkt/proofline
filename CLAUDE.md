@@ -31,3 +31,4 @@ PROOFLINE ("Evidence you can trace. Disputes you can defend.") is an evidence-pr
 - `pnpm lint` — ESLint checks across packages and apps.
 - `pnpm test` — Vitest unit, integration, and security test suites.
 - `pnpm build` — Full Turborepo production build.
+

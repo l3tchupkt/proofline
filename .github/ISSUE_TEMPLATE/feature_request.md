@@ -17,3 +17,4 @@ Describe the domain, API, or UI enhancement.
 
 - Does this introduce new evidence sources or locators?
 - Does this preserve explicit merchant confirmation prior to external submission?
+

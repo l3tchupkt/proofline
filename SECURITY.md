@@ -29,3 +29,4 @@ PROOFLINE enforces the following invariants by design:
 - **Untrusted document isolation**: Uploaded files are SHA-256 hashed, validated by file signature, stored privately, and treated as untrusted data against prompt injection.
 - **Verified webhooks**: Incoming PayPal webhooks require valid signature verification via PayPal's official `/v1/notifications/verify-webhook-signature` endpoint.
 - **Workspace isolation**: Every query and asset download is scoped server-side to the authenticated session's workspace.
+

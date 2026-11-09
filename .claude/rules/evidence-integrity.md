@@ -14,3 +14,4 @@ paths:
 5. Wrap all extracted document text inside `<untrusted_evidence>` delimiters and strip/neutralize prompt-injection directives.
 6. Every AI claim must reference at least one verified `sourceAssetId` from the current dispute; OCR-derived claims must be marked `REQUIRES_REVIEW`.
 7. Modifying submission notes, evidence type, or attached documents after merchant approval must immediately invalidate the approval.
+

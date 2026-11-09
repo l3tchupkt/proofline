@@ -40,3 +40,4 @@ Every extracted fact, timeline node, and response claim renders an interactive *
 1. Audit every new route/component against `docs/decisions/UI-DESIGN.md`.
 2. Verify all tables/grids use crisp 1px borders and `tabular-nums` alignment.
 3. Run the `web-design-guidelines` accessibility and UX checklist before sign-off.
+

@@ -22,3 +22,4 @@ description: Repeatable procedure for integrating, debugging, and testing PayPal
 4. Match `evidence_type` strictly against PayPal's requested evidence types (`PROOF_OF_FULFILLMENT`, `PROOF_OF_REFUND`, `PROOF_OF_DELIVERY_SIGNATURE`, `PROOF_OF_RECEIPT_OF_MERCHANDISE`, etc., preserving unknown strings verbatim).
 5. Validate every attachment: `.pdf`, `.jpg`, `.jpeg`, `.png`, `.gif`; `< 10 MB` each; `<= 50 MB` total.
 6. After submission, re-fetch `GET /v1/customer/disputes/{id}` and record PayPal's actual returned state without claiming the dispute is won.
+
