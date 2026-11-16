@@ -15,7 +15,7 @@
     "lint": "eslint src"
   },
   "dependencies": {
-    "@anthropic-ai/sdk": "^1.6.0",
+    "@anthropic-ai/sdk": "^1.8.0",
     "@proofline/authorization": "workspace:*",
     "@proofline/config": "workspace:*",
     "@proofline/contracts": "workspace:*",
